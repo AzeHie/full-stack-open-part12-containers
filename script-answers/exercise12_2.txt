@@ -1,0 +1,20 @@
+Script started on 2024-04-02 12:20:01+03:00 [TERM="xterm-256color" TTY="/dev/pts/6" COLUMNS="120" LINES="18"]
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+[?2004h]0;aze@AZE-LAPTOP: ~[01;32maze@AZE-LAPTOP[00m:[01;34m~[00m$ docker run - [Kit g[Kubuntu bash
+[?2004l[?2004h]0;root@cf33e48408b3: /root@cf33e48408b3:/# mkdir - p  p ^V[K  /usr/src/app
+[?2004l
+[?2004h]0;root@cf33e48408b3: /root@cf33e48408b3:/# 
+[?2004l[?2004h]0;root@cf33e48408b3: /root@cf33e48408b3:/# dir
+[?2004lbin  boot  dev	etc  home  lib	lib32  lib64  libx32  media  mnt  opt  proc  root  run	sbin  srv  sys	tmp  usr  var
+[?2004h]0;root@cf33e48408b3: /root@cf33e48408b3:/# cd us  ( /usr/src/app
+[?2004l[?2004h]0;root@cf33e48408b3: /usr/src/approot@cf33e48408b3:/usr/src/app# touch index.js
+[?2004l[?2004h]0;root@cf33e48408b3: /usr/src/approot@cf33e48408b3:/usr/src/app# dir
+[?2004lindex.js
+[?2004h]0;root@cf33e48408b3: /usr/src/approot@cf33e48408b3:/usr/src/app# exit
+[?2004lexit
+[?2004h]0;aze@AZE-LAPTOP: ~[01;32maze@AZE-LAPTOP[00m:[01;34m~[00m$ exit
+[?2004lexit
+
+Script done on 2024-04-02 12:21:21+03:00 [COMMAND_EXIT_CODE="0"]
