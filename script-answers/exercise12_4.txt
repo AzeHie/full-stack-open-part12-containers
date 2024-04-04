@@ -1,0 +1,337 @@
+Script started on 2024-04-04 14:52:21+03:00 [TERM="xterm-256color" TTY="/dev/pts/7" COLUMNS="120" LINES="30"]
+[?2004h]0;aze@AZE-LAPTOP: ~[01;32maze@AZE-LAPTOP[00m:[01;34m~[00m$ docker start -i strange_shr[Kirley
+[?2004l[?2004h]0;root@cf33e48408b3: /root@cf33e48408b3:/# apt-get install curl
+[?2004lReading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 5%Reading package lists... 5%Reading package lists... 6%Reading package lists... 6%Reading package lists... 59%Reading package lists... 59%Reading package lists... 60%Reading package lists... 60%Reading package lists... 67%Reading package lists... 67%Reading package lists... 68%Reading package lists... 75%Reading package lists... 75%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 87%Reading package lists... 87%Reading package lists... 95%Reading package lists... 95%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+The following additional packages will be installed:
+  ca-certificates libbrotli1 libcurl4 libldap-2.5-0 libldap-common libnghttp2-14 libpsl5 librtmp1 libsasl2-2
+  libsasl2-modules libsasl2-modules-db libssh-4 openssl publicsuffix
+Suggested packages:
+  libsasl2-modules-gssapi-mit | libsasl2-modules-gssapi-heimdal libsasl2-modules-ldap libsasl2-modules-otp
+  libsasl2-modules-sql
+The following NEW packages will be installed:
+  ca-certificates curl libbrotli1 libcurl4 libldap-2.5-0 libldap-common libnghttp2-14 libpsl5 librtmp1 libsasl2-2
+  libsasl2-modules libsasl2-modules-db libssh-4 openssl publicsuffix
+0 upgraded, 15 newly installed, 0 to remove and 12 not upgraded.
+Need to get 2991 kB of archives.
+After this operation, 7124 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+0% [Working]            Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 openssl amd64 3.0.2-0ubuntu1.15 [1186 kB]
+0% [1 openssl 1135 B/1186 kB 0%]3% [1 openssl 111 kB/1186 kB 9%]24% [1 openssl 897 kB/1186 kB 76%]                                  33% [Working]             Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 ca-certificates all 20230311ubuntu0.22.04.1 [155 kB]
+33% [2 ca-certificates 14.2 kB/155 kB 9%]36% [2 ca-certificates 106 kB/155 kB 68%]                                         39% [Working]             Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnghttp2-14 amd64 1.43.0-1ubuntu0.1 [76.7 kB]
+39% [3 libnghttp2-14 11.3 kB/76.7 kB 15%]                                         42% [Working]             Get:4 http://archive.ubuntu.com/ubuntu jammy/main amd64 libpsl5 amd64 0.21.0-1.2build2 [58.4 kB]
+42% [4 libpsl5 6931 B/58.4 kB 12%]                                  45% [Working]             Get:5 http://archive.ubuntu.com/ubuntu jammy/main amd64 publicsuffix all 20211207.1025-1 [129 kB]
+45% [5 publicsuffix 2585 B/129 kB 2%]48% [5 publicsuffix 108 kB/129 kB 83%]                                      50% [Working]             Get:6 http://archive.ubuntu.com/ubuntu jammy/main amd64 libbrotli1 amd64 1.0.9-2build6 [315 kB]
+50% [6 libbrotli1 6929 B/315 kB 2%]52% [6 libbrotli1 106 kB/315 kB 34%]                                                                        279 kB/s 4s59% [Working]                                                                                               279 kB/s 3s                                                                                                                       Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libsasl2-modules-db amd64 2.1.27+dfsg2-3ubuntu1.2 [20.5 kB]
+60% [7 libsasl2-modules-db 8379 B/20.5 kB 41%]                                                              279 kB/s 3s61% [Working]                                                                                               279 kB/s 3s                                                                                                                       Get:8 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libsasl2-2 amd64 2.1.27+dfsg2-3ubuntu1.2 [53.8 kB]
+62% [8 libsasl2-2 9827 B/53.8 kB 18%]                                                                       279 kB/s 3s64% [Working]                                                                                               279 kB/s 3s                                                                                                                       Get:9 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libldap-2.5-0 amd64 2.5.17+dfsg-0ubuntu0.22.04.1 [183 kB]
+64% [9 libldap-2.5-0 14.3 kB/183 kB 8%]                                                                     279 kB/s 3s67% [9 libldap-2.5-0 102 kB/183 kB 56%]                                                                     279 kB/s 3s70% [Working]                                                                                               279 kB/s 2s                                                                                                                       Get:10 http://archive.ubuntu.com/ubuntu jammy/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2build4 [58.2 kB]
+71% [10 librtmp1 14.2 kB/58.2 kB 24%]                                                                       279 kB/s 2s73% [Working]                                                                                               279 kB/s 2s                                                                                                                       Get:11 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libssh-4 amd64 0.9.6-2ubuntu0.22.04.3 [186 kB]
+74% [11 libssh-4 14.3 kB/186 kB 8%]                                                                         279 kB/s 2s76% [11 libssh-4 108 kB/186 kB 58%]                                                                         279 kB/s 2s79% [Working]                                                                                               279 kB/s 2s                                                                                                                       Get:12 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libcurl4 amd64 7.81.0-1ubuntu1.16 [290 kB]
+80% [12 libcurl4 4096 B/290 kB 1%]                                                                          279 kB/s 2s82% [12 libcurl4 97.5 kB/290 kB 34%]                                                                        279 kB/s 1s89% [Working]                                                                                               279 kB/s 1s                                                                                                                       Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 curl amd64 7.81.0-1ubuntu1.16 [194 kB]
+89% [13 curl 14.2 kB/194 kB 7%]                                                                             279 kB/s 0s92% [13 curl 147 kB/194 kB 76%]                                                                             180 kB/s 0s95% [Working]                                                                                               180 kB/s 0s                                                                                                                       Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libldap-common all 2.5.17+dfsg-0ubuntu0.22.04.1 [15.8 kB]
+95% [14 libldap-common 4096 B/15.8 kB 26%]                                                                  180 kB/s 0s97% [Working]                                                                                               180 kB/s 0s                                                                                                                       Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libsasl2-modules amd64 2.1.27+dfsg2-3ubuntu1.2 [68.8 kB]
+97% [15 libsasl2-modules 14.2 kB/68.8 kB 21%]                                                               180 kB/s 0s100% [Working]                                                                                              180 kB/s 0s                                                                                                                       Fetched 2991 kB in 14s (215 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package openssl.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4466 files and directories currently installed.)
+Preparing to unpack .../00-openssl_3.0.2-0ubuntu1.15_amd64.deb ...
+Unpacking openssl (3.0.2-0ubuntu1.15) ...
+Selecting previously unselected package ca-certificates.
+Preparing to unpack .../01-ca-certificates_20230311ubuntu0.22.04.1_all.deb ...
+Unpacking ca-certificates (20230311ubuntu0.22.04.1) ...
+Selecting previously unselected package libnghttp2-14:amd64.
+Preparing to unpack .../02-libnghttp2-14_1.43.0-1ubuntu0.1_amd64.deb ...
+Unpacking libnghttp2-14:amd64 (1.43.0-1ubuntu0.1) ...
+Selecting previously unselected package libpsl5:amd64.
+Preparing to unpack .../03-libpsl5_0.21.0-1.2build2_amd64.deb ...
+Unpacking libpsl5:amd64 (0.21.0-1.2build2) ...
+Selecting previously unselected package publicsuffix.
+Preparing to unpack .../04-publicsuffix_20211207.1025-1_all.deb ...
+Unpacking publicsuffix (20211207.1025-1) ...
+Selecting previously unselected package libbrotli1:amd64.
+Preparing to unpack .../05-libbrotli1_1.0.9-2build6_amd64.deb ...
+Unpacking libbrotli1:amd64 (1.0.9-2build6) ...
+Selecting previously unselected package libsasl2-modules-db:amd64.
+Preparing to unpack .../06-libsasl2-modules-db_2.1.27+dfsg2-3ubuntu1.2_amd64.deb ...
+Unpacking libsasl2-modules-db:amd64 (2.1.27+dfsg2-3ubuntu1.2) ...
+Selecting previously unselected package libsasl2-2:amd64.
+Preparing to unpack .../07-libsasl2-2_2.1.27+dfsg2-3ubuntu1.2_amd64.deb ...
+Unpacking libsasl2-2:amd64 (2.1.27+dfsg2-3ubuntu1.2) ...
+Selecting previously unselected package libldap-2.5-0:amd64.
+Preparing to unpack .../08-libldap-2.5-0_2.5.17+dfsg-0ubuntu0.22.04.1_amd64.deb ...
+Unpacking libldap-2.5-0:amd64 (2.5.17+dfsg-0ubuntu0.22.04.1) ...
+Selecting previously unselected package librtmp1:amd64.
+Preparing to unpack .../09-librtmp1_2.4+20151223.gitfa8646d.1-2build4_amd64.deb ...
+Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build4) ...
+Selecting previously unselected package libssh-4:amd64.
+Preparing to unpack .../10-libssh-4_0.9.6-2ubuntu0.22.04.3_amd64.deb ...
+Unpacking libssh-4:amd64 (0.9.6-2ubuntu0.22.04.3) ...
+Selecting previously unselected package libcurl4:amd64.
+Preparing to unpack .../11-libcurl4_7.81.0-1ubuntu1.16_amd64.deb ...
+Unpacking libcurl4:amd64 (7.81.0-1ubuntu1.16) ...
+Selecting previously unselected package curl.
+Preparing to unpack .../12-curl_7.81.0-1ubuntu1.16_amd64.deb ...
+Unpacking curl (7.81.0-1ubuntu1.16) ...
+Selecting previously unselected package libldap-common.
+Preparing to unpack .../13-libldap-common_2.5.17+dfsg-0ubuntu0.22.04.1_all.deb ...
+Unpacking libldap-common (2.5.17+dfsg-0ubuntu0.22.04.1) ...
+Selecting previously unselected package libsasl2-modules:amd64.
+Preparing to unpack .../14-libsasl2-modules_2.1.27+dfsg2-3ubuntu1.2_amd64.deb ...
+Unpacking libsasl2-modules:amd64 (2.1.27+dfsg2-3ubuntu1.2) ...
+Setting up libpsl5:amd64 (0.21.0-1.2build2) ...
+Setting up libbrotli1:amd64 (1.0.9-2build6) ...
+Setting up libsasl2-modules:amd64 (2.1.27+dfsg2-3ubuntu1.2) ...
+Setting up libnghttp2-14:amd64 (1.43.0-1ubuntu0.1) ...
+Setting up libldap-common (2.5.17+dfsg-0ubuntu0.22.04.1) ...
+Setting up libsasl2-modules-db:amd64 (2.1.27+dfsg2-3ubuntu1.2) ...
+Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build4) ...
+Setting up libsasl2-2:amd64 (2.1.27+dfsg2-3ubuntu1.2) ...
+Setting up libssh-4:amd64 (0.9.6-2ubuntu0.22.04.3) ...
+Setting up openssl (3.0.2-0ubuntu1.15) ...
+Setting up publicsuffix (20211207.1025-1) ...
+Setting up libldap-2.5-0:amd64 (2.5.17+dfsg-0ubuntu0.22.04.1) ...
+Setting up ca-certificates (20230311ubuntu0.22.04.1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 78.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.34.0 /usr/local/share/perl/5.34.0 /usr/lib/x86_64-linux-gnu/perl5/5.34 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.34 /usr/share/perl/5.34 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+debconf: falling back to frontend: Teletype
+Updating certificates in /etc/ssl/certs...
+137 added, 0 removed; done.
+Setting up libcurl4:amd64 (7.81.0-1ubuntu1.16) ...
+Setting up curl (7.81.0-1ubuntu1.16) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.6) ...
+Processing triggers for ca-certificates (20230311ubuntu0.22.04.1) ...
+Updating certificates in /etc/ssl/certs...
+0 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+done.
+[?2004h]0;root@cf33e48408b3: /root@cf33e48408b3:/# curl --version
+[?2004lcurl 7.81.0 (x86_64-pc-linux-gnu) libcurl/7.81.0 OpenSSL/3.0.2 zlib/1.2.11 brotli/1.0.9 zstd/1.4.8 libidn2/2.3.2 libpsl/0.21.0 (+libidn2/2.3.2) libssh/0.9.6/openssl/zlib nghttp2/1.43.0 librtmp/2.3 OpenLDAP/2.5.17
+Release-Date: 2022-01-05
+Protocols: dict file ftp ftps gopher gophers http https imap imaps ldap ldaps mqtt pop3 pop3s rtmp rtsp scp sftp smb smbs smtp smtps telnet tftp 
+Features: alt-svc AsynchDNS brotli GSS-API HSTS HTTP2 HTTPS-proxy IDN IPv6 Kerberos Largefile libz NTLM NTLM_WB PSL SPNEGO SSL TLS-SRP UnixSockets zstd
+[?2004h]0;root@cf33e48408b3: /root@cf33e48408b3:/# curl -sL https://deb.nodesource.com/setup_20.x | bash
+[?2004ljs[38;5;79m2024-04-04 11:54:55 - Installing pre-requisites[0m
+0% [Working]            Hit:1 http://archive.ubuntu.com/ubuntu jammy InRelease
+0% [Waiting for headers]                        Get:2 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
+0% [Connecting to archive.ubuntu.com] [2 InRelease 14.3 kB/110 kB 13%]                                                                      0% [Waiting for headers] [2 InRelease 28.9 kB/110 kB 26%]                                                         Get:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]
+0% [3 InRelease 12.8 kB/119 kB 11%] [2 InRelease 55.2 kB/110 kB 50%]                                                                    0% [3 InRelease 34.7 kB/119 kB 29%]0% [3 InRelease 58.1 kB/119 kB 49%]                                   0% [Waiting for headers]0% [Waiting for headers] [Waiting for headers]                                              Get:4 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1081 kB]
+0% [Waiting for headers] [4 Packages 12.9 kB/1081 kB 1%]                                                        Hit:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+                                                        0% [4 Packages 31.9 kB/1081 kB 3%]20% [Waiting for headers] [4 Packages 55.2 kB/1081 kB 5%]                                                         Get:6 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1358 kB]
+21% [6 Packages 12.9 kB/1358 kB 1%] [4 Packages 133 kB/1081 kB 12%]30% [6 Packages 198 kB/1358 kB 15%] [4 Packages 933 kB/1081 kB 86%]                                                                   33% [6 Packages 333 kB/1358 kB 25%]33% [4 Packages store 0 B] [6 Packages 333 kB/1358 kB 25%] [Connecting to security.ubuntu.com]                                                                                              35% [6 Packages 455 kB/1358 kB 34%] [Waiting for headers]                                                         Get:7 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [1641 kB]
+38% [6 Packages 832 kB/1358 kB 61%] [7 Packages 14.2 kB/1641 kB 1%]                                                                   44% [7 Packages 37.7 kB/1641 kB 2%]44% [6 Packages store 0 B] [Connecting to archive.ubuntu.com] [7 Packages 37.7 kB/1641 kB 2%]                                                                                             45% [Waiting for headers] [7 Packages 93.2 kB/1641 kB 6%]                                                         Get:8 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [2104 kB]
+45% [8 Packages 14.2 kB/2104 kB 1%] [7 Packages 146 kB/1641 kB 9%]54% [8 Packages 175 kB/2104 kB 8%] [7 Packages 870 kB/1641 kB 53%]                                                                  64% [8 Packages 432 kB/2104 kB 21%]64% [7 Packages store 0 B] [8 Packages 432 kB/2104 kB 21%]                                                          67% [8 Packages 753 kB/2104 kB 36%]                                   80% [Working]80% [8 Packages store 0 B] [Connecting to archive.ubuntu.com]                                                             81% [Waiting for headers]                         Get:9 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1920 kB]
+81% [9 Packages 14.2 kB/1920 kB 1%]                                   82% [9 Packages 102 kB/1920 kB 5%]88% [9 Packages 765 kB/1920 kB 40%]                                   99% [Working]99% [9 Packages store 0 B]                          100% [Working]              Fetched 8333 kB in 6s (1425 kB/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 5%Reading package lists... 5%Reading package lists... 6%Reading package lists... 6%Reading package lists... 59%Reading package lists... 59%Reading package lists... 60%Reading package lists... 60%Reading package lists... 66%Reading package lists... 67%Reading package lists... 67%Reading package lists... 75%Reading package lists... 75%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 87%Reading package lists... 87%Reading package lists... 95%Reading package lists... 95%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 5%Reading package lists... 5%Reading package lists... 6%Reading package lists... 6%Reading package lists... 59%Reading package lists... 59%Reading package lists... 60%Reading package lists... 60%Reading package lists... 67%Reading package lists... 67%Reading package lists... 75%Reading package lists... 75%Reading package lists... 78%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 87%Reading package lists... 87%Reading package lists... 95%Reading package lists... 95%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 6%Reading state information... Done
+ca-certificates is already the newest version (20230311ubuntu0.22.04.1).
+ca-certificates set to manually installed.
+curl is already the newest version (7.81.0-1ubuntu1.16).
+The following additional packages will be installed:
+  dirmngr gnupg-l10n gnupg-utils gpg gpg-agent gpg-wks-client gpg-wks-server gpgconf gpgsm libassuan0 libksba8
+  libnpth0 libreadline8 libsqlite3-0 pinentry-curses readline-common
+Suggested packages:
+  dbus-user-session libpam-systemd pinentry-gnome3 tor parcimonie xloadimage scdaemon pinentry-doc readline-doc
+The following NEW packages will be installed:
+  apt-transport-https dirmngr gnupg gnupg-l10n gnupg-utils gpg gpg-agent gpg-wks-client gpg-wks-server gpgconf gpgsm
+  libassuan0 libksba8 libnpth0 libreadline8 libsqlite3-0 pinentry-curses readline-common
+0 upgraded, 18 newly installed, 0 to remove and 12 not upgraded.
+Need to get 3159 kB of archives.
+After this operation, 8201 kB of additional disk space will be used.
+0% [Working]            Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 readline-common all 8.1.2-1 [53.5 kB]
+0% [1 readline-common 8192 B/53.5 kB 15%]                                         2% [Working]            Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 libreadline8 amd64 8.1.2-1 [153 kB]
+3% [2 libreadline8 14.2 kB/153 kB 9%]5% [2 libreadline8 109 kB/153 kB 71%]                                     7% [Working]            Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libsqlite3-0 amd64 3.37.2-2ubuntu0.3 [641 kB]
+8% [3 libsqlite3-0 14.2 kB/641 kB 2%]10% [3 libsqlite3-0 108 kB/641 kB 17%]                                      25% [Working]             Get:4 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 apt-transport-https all 2.4.12 [1510 B]
+25% [4 apt-transport-https 1510 B/1510 B 100%]                                              26% [Working]             Get:5 http://archive.ubuntu.com/ubuntu jammy/main amd64 libassuan0 amd64 2.5.5-1build1 [38.2 kB]
+26% [5 libassuan0 12.7 kB/38.2 kB 33%]                                      28% [Working]             Get:6 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 gpgconf amd64 2.2.27-3ubuntu2.1 [94.2 kB]
+28% [6 gpgconf 14.2 kB/94.2 kB 15%]                                   32% [Working]             Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libksba8 amd64 1.6.0-2ubuntu0.2 [119 kB]
+32% [7 libksba8 4096 B/119 kB 3%]34% [7 libksba8 102 kB/119 kB 86%]                                  36% [Working]             Get:8 http://archive.ubuntu.com/ubuntu jammy/main amd64 libnpth0 amd64 1.6-3build2 [8664 B]
+36% [8 libnpth0 8664 B/8664 B 100%]                                                                        175 kB/s 11s37% [Working]                                                                                              175 kB/s 11s                                                                                                                       Get:9 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 dirmngr amd64 2.2.27-3ubuntu2.1 [293 kB]
+37% [9 dirmngr 8377 B/293 kB 3%]                                                                           175 kB/s 11s40% [9 dirmngr 109 kB/293 kB 37%]                                                                          175 kB/s 11s46% [Working]                                                                                              175 kB/s 10s                                                                                                                       Get:10 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 gnupg-l10n all 2.2.27-3ubuntu2.1 [54.4 kB]
+46% [10 gnupg-l10n 14.2 kB/54.4 kB 26%]                                                                     175 kB/s 9s48% [Working]                                                                                               175 kB/s 9s                                                                                                                       Get:11 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 gnupg-utils amd64 2.2.27-3ubuntu2.1 [308 kB]
+48% [11 gnupg-utils 14.2 kB/308 kB 5%]                                                                      175 kB/s 9s51% [11 gnupg-utils 102 kB/308 kB 33%]                                                                      175 kB/s 9s57% [Working]                                                                                               175 kB/s 7s                                                                                                                       Get:12 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 gpg amd64 2.2.27-3ubuntu2.1 [519 kB]
+57% [12 gpg 12.8 kB/519 kB 2%]                                                                              175 kB/s 7s60% [12 gpg 106 kB/519 kB 20%]                                                                              175 kB/s 7s71% [Working]                                                                                               175 kB/s 4s                                                                                                                       Get:13 http://archive.ubuntu.com/ubuntu jammy/main amd64 pinentry-curses amd64 1.1.1-1build2 [34.4 kB]
+72% [13 pinentry-curses 14.2 kB/34.4 kB 41%]                                                                175 kB/s 4s73% [Working]                                                                                               175 kB/s 4s                                                                                                                       Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 gpg-agent amd64 2.2.27-3ubuntu2.1 [209 kB]
+73% [14 gpg-agent 12.3 kB/209 kB 6%]                                                                        175 kB/s 4s76% [14 gpg-agent 114 kB/209 kB 54%]                                                                        175 kB/s 4s80% [Working]                                                                                               175 kB/s 3s                                                                                                                       Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 gpg-wks-client amd64 2.2.27-3ubuntu2.1 [62.7 kB]
+80% [15 gpg-wks-client 12.8 kB/62.7 kB 20%]                                                                 225 kB/s 2s82% [Working]                                                                                               225 kB/s 2s                                                                                                                       Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 gpg-wks-server amd64 2.2.27-3ubuntu2.1 [57.5 kB]
+83% [16 gpg-wks-server 12.8 kB/57.5 kB 22%]                                                                 225 kB/s 2s85% [Working]                                                                                               225 kB/s 2s                                                                                                                       Get:17 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 gpgsm amd64 2.2.27-3ubuntu2.1 [197 kB]
+85% [17 gpgsm 14.2 kB/197 kB 7%]                                                                            225 kB/s 2s87% [17 gpgsm 100 kB/197 kB 51%]                                                                            225 kB/s 1s91% [Working]                                                                                               225 kB/s 1s                                                                                                                       Get:18 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 gnupg all 2.2.27-3ubuntu2.1 [315 kB]
+91% [18 gnupg 14.2 kB/315 kB 4%]                                                                            225 kB/s 1s96% [18 gnupg 197 kB/315 kB 62%]                                                                            225 kB/s 0s100% [Working]                                                                                              225 kB/s 0s                                                                                                                       Fetched 3159 kB in 16s (199 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package readline-common.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 5052 files and directories currently installed.)
+Preparing to unpack .../00-readline-common_8.1.2-1_all.deb ...
+Unpacking readline-common (8.1.2-1) ...
+Selecting previously unselected package libreadline8:amd64.
+Preparing to unpack .../01-libreadline8_8.1.2-1_amd64.deb ...
+Unpacking libreadline8:amd64 (8.1.2-1) ...
+Selecting previously unselected package libsqlite3-0:amd64.
+Preparing to unpack .../02-libsqlite3-0_3.37.2-2ubuntu0.3_amd64.deb ...
+Unpacking libsqlite3-0:amd64 (3.37.2-2ubuntu0.3) ...
+Selecting previously unselected package apt-transport-https.
+Preparing to unpack .../03-apt-transport-https_2.4.12_all.deb ...
+Unpacking apt-transport-https (2.4.12) ...
+Selecting previously unselected package libassuan0:amd64.
+Preparing to unpack .../04-libassuan0_2.5.5-1build1_amd64.deb ...
+Unpacking libassuan0:amd64 (2.5.5-1build1) ...
+Selecting previously unselected package gpgconf.
+Preparing to unpack .../05-gpgconf_2.2.27-3ubuntu2.1_amd64.deb ...
+Unpacking gpgconf (2.2.27-3ubuntu2.1) ...
+Selecting previously unselected package libksba8:amd64.
+Preparing to unpack .../06-libksba8_1.6.0-2ubuntu0.2_amd64.deb ...
+Unpacking libksba8:amd64 (1.6.0-2ubuntu0.2) ...
+Selecting previously unselected package libnpth0:amd64.
+Preparing to unpack .../07-libnpth0_1.6-3build2_amd64.deb ...
+Unpacking libnpth0:amd64 (1.6-3build2) ...
+Selecting previously unselected package dirmngr.
+Preparing to unpack .../08-dirmngr_2.2.27-3ubuntu2.1_amd64.deb ...
+Unpacking dirmngr (2.2.27-3ubuntu2.1) ...
+Selecting previously unselected package gnupg-l10n.
+Preparing to unpack .../09-gnupg-l10n_2.2.27-3ubuntu2.1_all.deb ...
+Unpacking gnupg-l10n (2.2.27-3ubuntu2.1) ...
+Selecting previously unselected package gnupg-utils.
+Preparing to unpack .../10-gnupg-utils_2.2.27-3ubuntu2.1_amd64.deb ...
+Unpacking gnupg-utils (2.2.27-3ubuntu2.1) ...
+Selecting previously unselected package gpg.
+Preparing to unpack .../11-gpg_2.2.27-3ubuntu2.1_amd64.deb ...
+Unpacking gpg (2.2.27-3ubuntu2.1) ...
+Selecting previously unselected package pinentry-curses.
+Preparing to unpack .../12-pinentry-curses_1.1.1-1build2_amd64.deb ...
+Unpacking pinentry-curses (1.1.1-1build2) ...
+Selecting previously unselected package gpg-agent.
+Preparing to unpack .../13-gpg-agent_2.2.27-3ubuntu2.1_amd64.deb ...
+Unpacking gpg-agent (2.2.27-3ubuntu2.1) ...
+Selecting previously unselected package gpg-wks-client.
+Preparing to unpack .../14-gpg-wks-client_2.2.27-3ubuntu2.1_amd64.deb ...
+Unpacking gpg-wks-client (2.2.27-3ubuntu2.1) ...
+Selecting previously unselected package gpg-wks-server.
+Preparing to unpack .../15-gpg-wks-server_2.2.27-3ubuntu2.1_amd64.deb ...
+Unpacking gpg-wks-server (2.2.27-3ubuntu2.1) ...
+Selecting previously unselected package gpgsm.
+Preparing to unpack .../16-gpgsm_2.2.27-3ubuntu2.1_amd64.deb ...
+Unpacking gpgsm (2.2.27-3ubuntu2.1) ...
+Selecting previously unselected package gnupg.
+Preparing to unpack .../17-gnupg_2.2.27-3ubuntu2.1_all.deb ...
+Unpacking gnupg (2.2.27-3ubuntu2.1) ...
+Setting up libksba8:amd64 (1.6.0-2ubuntu0.2) ...
+Setting up apt-transport-https (2.4.12) ...
+Setting up libsqlite3-0:amd64 (3.37.2-2ubuntu0.3) ...
+Setting up libnpth0:amd64 (1.6-3build2) ...
+Setting up libassuan0:amd64 (2.5.5-1build1) ...
+Setting up gnupg-l10n (2.2.27-3ubuntu2.1) ...
+Setting up readline-common (8.1.2-1) ...
+Setting up pinentry-curses (1.1.1-1build2) ...
+Setting up libreadline8:amd64 (8.1.2-1) ...
+Setting up gpgconf (2.2.27-3ubuntu2.1) ...
+Setting up gpg (2.2.27-3ubuntu2.1) ...
+Setting up gnupg-utils (2.2.27-3ubuntu2.1) ...
+Setting up gpg-agent (2.2.27-3ubuntu2.1) ...
+Setting up gpgsm (2.2.27-3ubuntu2.1) ...
+Setting up dirmngr (2.2.27-3ubuntu2.1) ...
+Setting up gpg-wks-server (2.2.27-3ubuntu2.1) ...
+Setting up gpg-wks-client (2.2.27-3ubuntu2.1) ...
+Setting up gnupg (2.2.27-3ubuntu2.1) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.6) ...
+0% [Working]            Hit:1 http://archive.ubuntu.com/ubuntu jammy InRelease
+0% [Waiting for headers] [Waiting for headers]                                              Get:2 https://deb.nodesource.com/node_20.x nodistro InRelease [12.1 kB]
+0% [Waiting for headers] [Waiting for headers] [2 InRelease 12.1 kB/12.1 kB 100%]                                                                                 0% [Waiting for headers] [Waiting for headers]0% [Waiting for headers] [Waiting for headers]                                              Hit:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
+                                              0% [Waiting for headers]                        Hit:4 http://security.ubuntu.com/ubuntu jammy-security InRelease
+0% [Waiting for headers]0% [Waiting for headers]                        Get:5 https://deb.nodesource.com/node_20.x nodistro/main amd64 Packages [5901 B]
+0% [Waiting for headers] [5 Packages 5901 B/5901 B 100%]                                                        0% [Waiting for headers]0% [5 Packages store 0 B] [Waiting for headers]                                               0% [Waiting for headers]                        Hit:6 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+                        0% [Working]0% [Working]0% [Working]100% [Working]              Fetched 18.0 kB in 1s (30.7 kB/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 5%Reading package lists... 5%Reading package lists... 6%Reading package lists... 6%Reading package lists... 59%Reading package lists... 59%Reading package lists... 60%Reading package lists... 60%Reading package lists... 67%Reading package lists... 67%Reading package lists... 72%Reading package lists... 75%Reading package lists... 75%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 87%Reading package lists... 87%Reading package lists... 95%Reading package lists... 95%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+[1;32m2024-04-04 11:55:24 - Repository configured successfully. To install Node.js, run: apt-get install nodejs -y[0m
+[?2004h]0;root@cf33e48408b3: /root@cf33e48408b3:/# [Kapt install -y nodejs[K]0;root@cf33e48408b3: /root@cf33e48408b3:/# apt install -y nodejs                     node /usr/src/app/index.js
+[?2004lbash: node: command not found
+[?2004h]0;root@cf33e48408b3: /root@cf33e48408b3:/# [Kapt install -y nodejs
+[?2004lReading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 5%Reading package lists... 5%Reading package lists... 6%Reading package lists... 6%Reading package lists... 59%Reading package lists... 59%Reading package lists... 60%Reading package lists... 60%Reading package lists... 67%Reading package lists... 67%Reading package lists... 75%Reading package lists... 75%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 87%Reading package lists... 87%Reading package lists... 95%Reading package lists... 95%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 3%Reading state information... Done
+The following additional packages will be installed:
+  libexpat1 libmpdec3 libpython3-stdlib libpython3.10-minimal libpython3.10-stdlib media-types python3 python3-minimal python3.10 python3.10-minimal
+Suggested packages:
+  python3-doc python3-tk python3-venv python3.10-venv python3.10-doc binutils binfmt-support
+The following NEW packages will be installed:
+  libexpat1 libmpdec3 libpython3-stdlib libpython3.10-minimal libpython3.10-stdlib media-types nodejs python3 python3-minimal python3.10 python3.10-minimal
+0 upgraded, 11 newly installed, 0 to remove and 12 not upgraded.
+Need to get 37.3 MB of archives.
+After this operation, 217 MB of additional disk space will be used.
+[33m0% [Working][0m            Get:1 https://deb.nodesource.com/node_20.x nodistro/main amd64 nodejs amd64 20.12.1-1nodesource1 [31.6 MB]
+[33m0% [Waiting for headers] [1 nodejs 15.9 kB/31.6 MB 0%][0m                                                      Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpython3.10-minimal amd64 3.10.12-1~22.04.3 [812 kB]
+[33m4% [2 libpython3.10-minimal 12.8 kB/812 kB 2%] [1 nodejs 1720 kB/31.6 MB 5%][0m[33m26% [2 libpython3.10-minimal 149 kB/812 kB 18%] [1 nodejs 12.1 MB/31.6 MB 38%][0m[33m                                                                              48% [1 nodejs 20.7 MB/31.6 MB 66%][0m                                  Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libexpat1 amd64 2.4.7-1ubuntu0.3 [91.0 kB]
+[33m60% [3 libexpat1 12.7 kB/91.0 kB 14%] [1 nodejs 26.4 MB/31.6 MB 84%][0m[33m                                                                    73% [3 libexpat1 49.3 kB/91.0 kB 54%][0m[33m                                     75% [Working][0m             Get:4 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3.10-minimal amd64 3.10.12-1~22.04.3 [2242 kB]
+[33m75% [4 python3.10-minimal 14.2 kB/2242 kB 1%][0m[33m                                             75% [4 python3.10-minimal 108 kB/2242 kB 5%][0m[33m77% [4 python3.10-minimal 680 kB/2242 kB 30%][0m[33m                                             82% [Working][0m             Get:5 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3-minimal amd64 3.10.6-1~22.04 [24.3 kB]
+[33m82% [5 python3-minimal 4096 B/24.3 kB 17%][0m[33m                                          84% [Working][0m             Get:6 http://archive.ubuntu.com/ubuntu jammy/main amd64 media-types all 7.0.0 [25.5 kB]
+[33m84% [6 media-types 12.3 kB/25.5 kB 48%][0m[33m                                       86% [Working][0m             Get:7 http://archive.ubuntu.com/ubuntu jammy/main amd64 libmpdec3 amd64 2.5.1-2build2 [86.8 kB]
+[33m86% [7 libmpdec3 1138 B/86.8 kB 1%][0m[33m                                   88% [Working][0m             Get:8 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpython3.10-stdlib amd64 3.10.12-1~22.04.3 [1848 kB]
+[33m88% [8 libpython3.10-stdlib 14.2 kB/1848 kB 1%]                                                                                                                5762 kB/s 0s[0m[33m88% [8 libpython3.10-stdlib 102 kB/1848 kB 6%]                                                                                                                 5762 kB/s 0s[0m[33m89% [8 libpython3.10-stdlib 747 kB/1848 kB 40%]                                                                                                                5762 kB/s 0s[0m[33m93% [Working]                                                                                                                                                  5762 kB/s 0s[0m                                                                                                                                                                           Get:9 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3.10 amd64 3.10.12-1~22.04.3 [508 kB]
+[33m93% [9 python3.10 14.2 kB/508 kB 3%]                                                                                                                           5762 kB/s 0s[0m[33m94% [9 python3.10 102 kB/508 kB 20%]                                                                                                                           5762 kB/s 0s[0m[33m96% [Working]                                                                                                                                                  5762 kB/s 0s[0m                                                                                                                                                                           Get:10 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpython3-stdlib amd64 3.10.6-1~22.04 [6910 B]
+[33m96% [10 libpython3-stdlib 5532 B/6910 B 80%]                                                                                                                   5762 kB/s 0s[0m[33m98% [Working]                                                                                                                                                  5762 kB/s 0s[0m                                                                                                                                                                           Get:11 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3 amd64 3.10.6-1~22.04 [22.8 kB]
+[33m98% [11 python3 14.2 kB/22.8 kB 62%]                                                                                                                           5762 kB/s 0s[0m[33m100% [Working]                                                                                                                                                 5762 kB/s 0s[0m                                                                                                                                                                           Fetched 37.3 MB in 10s (3905 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+
+7[0;40r8[1ASelecting previously unselected package libpython3.10-minimal:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 5297 files and directories currently installed.)
+Preparing to unpack .../libpython3.10-minimal_3.10.12-1~22.04.3_amd64.deb ...
+7[41;0f[42m[30mProgress: [  0%][49m[39m [......................................................................................................................................................] 87[41;0f[42m[30mProgress: [  2%][49m[39m [###...................................................................................................................................................] 8Unpacking libpython3.10-minimal:amd64 (3.10.12-1~22.04.3) ...
+7[41;0f[42m[30mProgress: [  4%][49m[39m [######................................................................................................................................................] 8Selecting previously unselected package libexpat1:amd64.
+Preparing to unpack .../libexpat1_2.4.7-1ubuntu0.3_amd64.deb ...
+7[41;0f[42m[30mProgress: [  7%][49m[39m [#########.............................................................................................................................................] 8Unpacking libexpat1:amd64 (2.4.7-1ubuntu0.3) ...
+7[41;0f[42m[30mProgress: [  9%][49m[39m [#############.........................................................................................................................................] 8Selecting previously unselected package python3.10-minimal.
+Preparing to unpack .../python3.10-minimal_3.10.12-1~22.04.3_amd64.deb ...
+7[41;0f[42m[30mProgress: [ 11%][49m[39m [################......................................................................................................................................] 8Unpacking python3.10-minimal (3.10.12-1~22.04.3) ...
+7[41;0f[42m[30mProgress: [ 13%][49m[39m [###################...................................................................................................................................] 8Setting up libpython3.10-minimal:amd64 (3.10.12-1~22.04.3) ...
+7[41;0f[42m[30mProgress: [ 16%][49m[39m [#######################...............................................................................................................................] 87[41;0f[42m[30mProgress: [ 18%][49m[39m [##########################............................................................................................................................] 8Setting up libexpat1:amd64 (2.4.7-1ubuntu0.3) ...
+7[41;0f[42m[30mProgress: [ 20%][49m[39m [##############################........................................................................................................................] 87[41;0f[42m[30mProgress: [ 22%][49m[39m [#################################.....................................................................................................................] 8Setting up python3.10-minimal (3.10.12-1~22.04.3) ...
+7[41;0f[42m[30mProgress: [ 24%][49m[39m [####################################..................................................................................................................] 87[41;0f[42m[30mProgress: [ 27%][49m[39m [#######################################...............................................................................................................] 8Selecting previously unselected package python3-minimal.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 5601 files and directories currently installed.)
+Preparing to unpack .../0-python3-minimal_3.10.6-1~22.04_amd64.deb ...
+7[41;0f[42m[30mProgress: [ 29%][49m[39m [###########################################...........................................................................................................] 8Unpacking python3-minimal (3.10.6-1~22.04) ...
+7[41;0f[42m[30mProgress: [ 31%][49m[39m [##############################################........................................................................................................] 8Selecting previously unselected package media-types.
+Preparing to unpack .../1-media-types_7.0.0_all.deb ...
+7[41;0f[42m[30mProgress: [ 33%][49m[39m [#################################################.....................................................................................................] 8Unpacking media-types (7.0.0) ...
+7[41;0f[42m[30mProgress: [ 36%][49m[39m [#####################################################.................................................................................................] 8Selecting previously unselected package libmpdec3:amd64.
+Preparing to unpack .../2-libmpdec3_2.5.1-2build2_amd64.deb ...
+7[41;0f[42m[30mProgress: [ 38%][49m[39m [########################################################..............................................................................................] 8Unpacking libmpdec3:amd64 (2.5.1-2build2) ...
+7[41;0f[42m[30mProgress: [ 40%][49m[39m [############################################################..........................................................................................] 8Selecting previously unselected package libpython3.10-stdlib:amd64.
+Preparing to unpack .../3-libpython3.10-stdlib_3.10.12-1~22.04.3_amd64.deb ...
+7[41;0f[42m[30mProgress: [ 42%][49m[39m [###############################################################.......................................................................................] 8Unpacking libpython3.10-stdlib:amd64 (3.10.12-1~22.04.3) ...
+7[41;0f[42m[30mProgress: [ 44%][49m[39m [##################################################################....................................................................................] 8Selecting previously unselected package python3.10.
+Preparing to unpack .../4-python3.10_3.10.12-1~22.04.3_amd64.deb ...
+7[41;0f[42m[30mProgress: [ 47%][49m[39m [######################################################################................................................................................] 8Unpacking python3.10 (3.10.12-1~22.04.3) ...
+7[41;0f[42m[30mProgress: [ 49%][49m[39m [#########################################################################.............................................................................] 8Selecting previously unselected package libpython3-stdlib:amd64.
+Preparing to unpack .../5-libpython3-stdlib_3.10.6-1~22.04_amd64.deb ...
+7[41;0f[42m[30mProgress: [ 51%][49m[39m [############################################################################..........................................................................] 8Unpacking libpython3-stdlib:amd64 (3.10.6-1~22.04) ...
+7[41;0f[42m[30mProgress: [ 53%][49m[39m [###############################################################################.......................................................................] 8Setting up python3-minimal (3.10.6-1~22.04) ...
+7[41;0f[42m[30mProgress: [ 56%][49m[39m [###################################################################################...................................................................] 87[41;0f[42m[30mProgress: [ 58%][49m[39m [######################################################################################................................................................] 8Selecting previously unselected package python3.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 6003 files and directories currently installed.)
+Preparing to unpack .../python3_3.10.6-1~22.04_amd64.deb ...
+7[41;0f[42m[30mProgress: [ 60%][49m[39m [##########################################################################################............................................................] 8Unpacking python3 (3.10.6-1~22.04) ...
+7[41;0f[42m[30mProgress: [ 62%][49m[39m [#############################################################################################.........................................................] 8Selecting previously unselected package nodejs.
+Preparing to unpack .../nodejs_20.12.1-1nodesource1_amd64.deb ...
+7[41;0f[42m[30mProgress: [ 64%][49m[39m [################################################################################################......................................................] 8Unpacking nodejs (20.12.1-1nodesource1) ...
+7[41;0f[42m[30mProgress: [ 67%][49m[39m [###################################################################################################...................................................] 8Setting up media-types (7.0.0) ...
+7[41;0f[42m[30mProgress: [ 69%][49m[39m [#######################################################################################################...............................................] 87[41;0f[42m[30mProgress: [ 71%][49m[39m [##########################################################################################################............................................] 8Setting up libmpdec3:amd64 (2.5.1-2build2) ...
+7[41;0f[42m[30mProgress: [ 73%][49m[39m [##############################################################################################################........................................] 87[41;0f[42m[30mProgress: [ 76%][49m[39m [#################################################################################################################.....................................] 8Setting up libpython3.10-stdlib:amd64 (3.10.12-1~22.04.3) ...
+7[41;0f[42m[30mProgress: [ 78%][49m[39m [####################################################################################################################..................................] 87[41;0f[42m[30mProgress: [ 80%][49m[39m [########################################################################################################################..............................] 8Setting up libpython3-stdlib:amd64 (3.10.6-1~22.04) ...
+7[41;0f[42m[30mProgress: [ 82%][49m[39m [###########################################################################################################################...........................] 87[41;0f[42m[30mProgress: [ 84%][49m[39m [##############################################################################################################################........................] 8Setting up python3.10 (3.10.12-1~22.04.3) ...
+7[41;0f[42m[30mProgress: [ 87%][49m[39m [#################################################################################################################################.....................] 87[41;0f[42m[30mProgress: [ 89%][49m[39m [#####################################################################################################################################.................] 8Setting up python3 (3.10.6-1~22.04) ...
+7[41;0f[42m[30mProgress: [ 91%][49m[39m [########################################################################################################################################..............] 8running python rtupdate hooks for python3.10...
+running python post-rtupdate hooks for python3.10...
+7[41;0f[42m[30mProgress: [ 93%][49m[39m [############################################################################################################################################..........] 8Setting up nodejs (20.12.1-1nodesource1) ...
+7[41;0f[42m[30mProgress: [ 96%][49m[39m [###############################################################################################################################################.......] 87[41;0f[42m[30mProgress: [ 98%][49m[39m [##################################################################################################################################################....] 8Processing triggers for libc-bin (2.35-0ubuntu3.6) ...
+
+7[0;41r8[1A[J[?2004h]0;root@cf33e48408b3: /root@cf33e48408b3:/# node /usr/src/app/index.js
+[?2004lHello World
+[?2004h]0;root@cf33e48408b3: /root@cf33e48408b3:/# [Kexit
+[?2004lexit
+[?2004h]0;aze@AZE-LAPTOP: ~[01;32maze@AZE-LAPTOP[00m:[01;34m~[00m$ exit
+[?2004lexit
+
+Script done on 2024-04-04 14:56:49+03:00 [COMMAND_EXIT_CODE="0"]
