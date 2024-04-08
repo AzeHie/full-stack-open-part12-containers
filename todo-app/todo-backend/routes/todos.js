@@ -60,6 +60,11 @@ singleRouter.put('/', async (req, res) => {
     if (!updatedTodo) {
       return res.status(404).json('Failed to update todo');
     }
+
+    res.status(200).json({
+      updatedTodo,
+      message: 'Todo updated successfully',
+    });
   } catch (err) {
     console.error('Failed to update todo: ', err);
     res.status(500).json('Failed to update todo');
