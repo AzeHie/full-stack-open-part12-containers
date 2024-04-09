@@ -1,0 +1,100 @@
+Script started on 2024-04-09 17:54:38+03:00 [TERM="xterm-256color" TTY="/dev/pts/8" COLUMNS="172" LINES="41"]
+[?2004h]0;aze@AZE-LAPTOP: ~/full-stack-open-part12-containers[01;32maze@AZE-LAPTOP[00m:[01;34m~/full-stack-open-part12-containers[00m$ ex[K[Kd[Kdocker container ls
+[?2004lCONTAINER ID   IMAGE               COMMAND                  CREATED         STATUS         PORTS                     NAMES
+d1f992c42760   nginx               "/docker-entrypoint.…"   8 minutes ago   Up 8 minutes   0.0.0.0:8080->80/tcp      modest_haibt
+81d3ceb448ed   initialized-mongo   "docker-entrypoint.s…"   26 hours ago    Up 26 hours    0.0.0.0:3456->27017/tcp   todo-backend-mongo-1
+[?2004h]0;aze@AZE-LAPTOP: ~/full-stack-open-part12-containers[01;32maze@AZE-LAPTOP[00m:[01;34m~/full-stack-open-part12-containers[00m$ docker exec -it todo-backend-mongo-q[K1
+[?2004l"docker exec" requires at least 2 arguments.
+See 'docker exec --help'.
+
+Usage:  docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
+
+Execute a command in a running container
+[?2004h]0;aze@AZE-LAPTOP: ~/full-stack-open-part12-containers[01;32maze@AZE-LAPTOP[00m:[01;34m~/full-stack-open-part12-containers[00m$ docker exec -it todo-backend-mongo-1-[K bash
+[?2004l[?2004hroot@81d3ceb448ed:/# mongosh
+[?2004l]0;mongosh mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000Current Mongosh Log ID:	6615575e76869033467b2da8
+Connecting to:		[1m[32mmongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.2.2[0m
+Using MongoDB:		7.0.8
+[1m[33mUsing Mongosh[0m:		2.2.2
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+
+To help improve our products, anonymous usage data is collected and sent to MongoDB periodically (https://www.mongodb.com/legal/privacy-policy).
+You can opt-out by running the disableTelemetry() command.
+
+[1G[0J [1G[1G[0Jtest> [7Gshow dbs
+Uncaught [1m[31mMongoServerError[0m[1m[31m[Unauthorized][0m: Command listDatabases requires authentication
+[1G[0Jtest> [7Gmongosh -u root[1G[0Jtest> mongosh -u roo[21G[1G[0Jtest> mongosh -u ro[20G[1G[0Jtest> mongosh -u r[19G[1G[0Jtest> mongosh -u [18G[1G[0Jtest> mongosh -u[17G[1G[0Jtest> mongosh -[16G[1G[0Jtest> mongosh [15G[1G[0Jtest> mongosh[14G[1G[0Jtest> mongos[13G[1G[0Jtest> mongo[12G[1G[0Jtest> mong[11G[1G[0Jtest> mon[10G[1G[0Jtest> mo[9G[1G[0Jtest> m[8G[1G[0Jtest> [7G
+(To exit, press Ctrl+C again or Ctrl+D or type .exit)
+[1G[0Jtest> [7G
+[?2004hroot@81d3ceb448ed:/# 
+[?2004l[?2004hroot@81d3ceb448ed:/# mongosh -u root -p example
+[?2004l]0;mongosh mongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000Current Mongosh Log ID:	661557f506f235332f7b2da8
+Connecting to:		[1m[32mmongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.2.2[0m
+Using MongoDB:		7.0.8
+[1m[33mUsing Mongosh[0m:		2.2.2
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+[1G[0J [1G[1m[33m------[0m
+   [1m[33mThe server generated these startup warnings when booting[0m
+   2024-04-08T12:36:04.795+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+   2024-04-08T12:36:06.145+00:00: /sys/kernel/mm/transparent_hugepage/enabled is 'always'. We suggest setting it to 'never' in this binary version
+   2024-04-08T12:36:06.145+00:00: vm.max_map_count is too low
+[1m[33m------[0m
+
+[1G[0Jtest> [7Gshow dbs
+[1madmin[0m         100.00 KiB
+[1mconfig[0m        108.00 KiB
+[1mlocal[0m          72.00 KiB
+[1mthe_database[0m   40.00 KiB
+[1G[0Jtest> [7Guse the:[1G[0Jtest> use the[14G_datana[1G[0Jtest> use the_datan[20G[1G[0Jtest> use the_data[19Gbase
+switched to db the_database
+[1G[0Jthe_database> [15Gshow collections
+[1mtodos[0m
+[1G[0Jthe_database> [15Gdb.todosfind[1G[0Jthe_database> db.todosfin[26G[1G[0Jthe_database> db.todosfi[25G[1G[0Jthe_database> db.todosf[24G[1G[0Jthe_database> db.todos[23G.find({}][1G[0Jthe_database> db.todos.find({}[31G)
+[
+  {
+    _id: ObjectId([32m'6613e4b3d86da931157b2da9'[39m),
+    text: [32m'Write code'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId([32m'6613e4b3d86da931157b2daa'[39m),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  }
+]
+[1G[0Jthe_database> [15Gi[36min[39m[1G[0Jthe_database> i[16G[1G[0Jthe_database> [15Gdb.todos.insertone[1G[0Jthe_database> db.todos.inserton[32G[1G[0Jthe_database> db.todos.inserto[31G[1G[0Jthe_database> db.todos.insert[30GOne({ text[33mtext[39m: [32m'[39m[32mT[39m[32me[39m[32ms[39m[32mt[39m [32mi[39m[32mn[39m[32ms[39m[32mt[39m[32me[39m[32mr[39m[32mg[39m[1G[0Jthe_database> db.todos.insertOne({ [33mtext[39m: [32m'Test inster[39m[54G[32mt[39m[32mi[39m[32mn[39m[32mg[39m [32mt[39m[32mo[39m[32md[39m[32mo[39m[32ms[39m[1G[0Jthe_database> db.todos.insertOne({ [33mtext[39m: [32m'Test insterting todo[39m[63G[1G[0Jthe_database> db.todos.insertOne({ [33mtext[39m: [32m'Test insterting tod[39m[62G[1G[0Jthe_database> db.todos.insertOne({ [33mtext[39m: [32m'Test insterting to[39m[61G[1G[0Jthe_database> db.todos.insertOne({ [33mtext[39m: [32m'Test insterting t[39m[60G[1G[0Jthe_database> db.todos.insertOne({ [33mtext[39m: [32m'Test insterting [39m[59G[32m<[39m [32mn[39m[1G[0Jthe_database> db.todos.insertOne({ [33mtext[39m: [32m'Test insterting < [39m[61G[1G[0Jthe_database> db.todos.insertOne({ [33mtext[39m: [32m'Test insterting <[39m[60G[1G[0Jthe_database> db.todos.insertOne({ [33mtext[39m: [32m'Test insterting [39m[59G[32ma[39m [32mn[39m[32me[39m[32mw[39m [32mt[39m[32mo[39m[32md[39m[32mo[39m[32m"[39m[1D[1G[0Jthe_database> db.todos.insertOne({ [33mtext[39m: [32m'Test insterting a new todo"[39m[69G[1D[1G[0Jthe_database> db.todos.insertOne({ [33mtext[39m: [32m'Test insterting a new todo"[39m[68G[1D[1D[1D[1D[1D[1D[1D[1D[1C[1C[1C[1C[1C[1C[1C[1C[1C[1G[0Jthe_database> db.todos.insertOne({ [33mtext[39m: [32m'Test insterting a new todo"[39m[69G[1C[1G[0Jthe_database> db.todos.insertOne({ [33mtext[39m: [32m'Test insterting a new todo"[39m[70G[32m,[39m [32md[39m[32mo[39m[32mn[39m[32me[39m[32m:[39m [32m'[39mtru[33mtrue[39m[32m'[39m[1G[0Jthe_database> db.todos.insertOne({ [33mtext[39m: [32m'Test insterting a new todo", done: '[39m[33mtrue[39m[83G[1G[0Jthe_database> db.todos.insertOne({ [33mtext[39m: [32m'Test insterting a new todo", done: '[39mtru[82G[1G[0Jthe_database> db.todos.insertOne({ [33mtext[39m: [32m'Test insterting a new todo", done: '[39mtr[81G[1G[0Jthe_database> db.todos.insertOne({ [33mtext[39m: [32m'Test insterting a new todo", done: '[39mt[80G[1G[0Jthe_database> db.todos.insertOne({ [33mtext[39m: [32m'Test insterting a new todo", done: '[39m[79G[1G[0Jthe_database> db.todos.insertOne({ [33mtext[39m: [32m'Test insterting a new todo", done: [39m[78G[32mt[39m[32mr[39m[32mu[39m[32me[39m [32m}[39m[32m)[39m[1G[0Jthe_database> db.todos.insertOne({ [33mtext[39m: [32m'Test insterting a new todo", done: true }[39m[84G[1G[0Jthe_database> db.todos.insertOne({ [33mtext[39m: [32m'Test insterting a new todo", done: true [39m[83G[1G[0Jthe_database> db.todos.insertOne({ [33mtext[39m: [32m'Test insterting a new todo", done: true[39m[82G[32m'[39m [1D[1D[1G[0Jthe_database> db.todos.insertOne({ [33mtext[39m: [44m[32m'[49mTest insterting a new todo", done: true'[39m [82G[1D[1G[0Jthe_database> db.todos.insertOne({ [33mtext[39m: [32m'Test insterting a new todo", done: true'[39m [81G[1D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1G[0Jthe_database> db.todos.insertOne({ [33mtext[39m: [32m'Test insterting a new todo" done: true'[39m [70G[1G[0Jthe_database> db.todos.insertOne({ [33mtext[39m: [32m'Test insterting a new todo done: true'[39m [69G[1G[0Jthe_database> db.todos.insertOne({ [33mtext[39m: [32m'Test insterting a new todo'[39m done: [33mtrue[39m[32m' [39m[70G[1C[1C[1C[1C[1C[1C[1C[1D[1D[1D[1D[1D[1D[1D[1G[0Jthe_database> db.todos.insertOne({ [33mtext[39m: [32m'Test insterting a new todo'[39m, [33mdone[39m: [33mtrue[39m[32m' [39m[71G[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1G[0Jthe_database> db.todos.insertOne({ [33mtext[39m: [32m'Test insterting a new todo'[39m, [33mdone[39m: [33mtrue[39m[32m' [39m[82G[1C[1G[0Jthe_database> db.todos.insertOne({ [33mtext[39m: [32m'Test insterting a new todo'[39m, [33mdone[39m: [33mtrue[39m[32m' [39m[83G[1C[1D[1G[0Jthe_database> db.todos.insertOne({ [33mtext[39m: [32m'Test insterting a new todo'[39m, [33mdone[39m: [33mtrue[39m [82G[1G[0Jthe_database> db.todos.insertOne({ [33mtext[39m: [32m'Test insterting a new todo'[39m, [33mdone[39m: [33mtrue[39m  [83G[1G[0Jthe_database> db.todos.insertOne({ [33mtext[39m: [32m'Test insterting a new todo'[39m, [33mdone[39m: [33mtrue[39m } [84G[1G[0Jthe_database> db.todos.insertOne({ [33mtext[39m: [32m'Test insterting a new todo'[39m, [33mdone[39m: [33mtrue[39m }) [85G[1C
+{
+  acknowledged: [33mtrue[39m,
+  insertedId: ObjectId([32m'661558b106f235332f7b2da9'[39m)
+}
+[1G[0Jthe_database> [15Gdb.todos.find({})
+[
+  {
+    _id: ObjectId([32m'6613e4b3d86da931157b2da9'[39m),
+    text: [32m'Write code'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId([32m'6613e4b3d86da931157b2daa'[39m),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  },
+  {
+    _id: ObjectId([32m'661558b106f235332f7b2da9'[39m),
+    text: [32m'Test insterting a new todo'[39m,
+    done: [33mtrue[39m
+  }
+]
+[1G[0Jthe_database> [15Gex[1G[0Jthe_database> e[16G[1G[0Jthe_database> [15G
+(To exit, press Ctrl+C again or Ctrl+D or type .exit)
+[1G[0Jthe_database> [15G
+[?2004hroot@81d3ceb448ed:/# exit
+[?2004lexit
+[?2004h]0;aze@AZE-LAPTOP: ~/full-stack-open-part12-containers[01;32maze@AZE-LAPTOP[00m:[01;34m~/full-stack-open-part12-containers[00m$ exit
+[?2004lexit
+
+Script done on 2024-04-09 18:03:35+03:00 [COMMAND_EXIT_CODE="0"]
