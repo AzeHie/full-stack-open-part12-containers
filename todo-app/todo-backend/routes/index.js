@@ -1,7 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-const configs = require('../util/config')
+const configs = require('../util/config');
+
+const redis = require('../redis');
 
 let visits = 0
 
