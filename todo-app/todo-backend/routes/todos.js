@@ -1,5 +1,7 @@
 const express = require('express');
 const { Todo } = require('../mongo');
+const { getAsync, setAsync } = require('../redis');
+
 const router = express.Router();
 
 /* GET todos listing. */
@@ -10,12 +12,39 @@ router.get('/', async (_, res) => {
 
 /* POST todo to listing. */
 router.post('/', async (req, res) => {
-  const todo = await Todo.create({
-    text: req.body.text,
-    done: false,
-  });
-  res.send(todo);
+  try {
+    const todo = await Todo.create({
+      text: req.body.text,
+      done: false,
+    });
+  
+    if (todo) {
+      let currentCount = await getAsync('added-todos');
+
+      if (isNaN(currentCount) || !currentCount) {
+        currentCount = 0;
+      }
+
+      const newCount = parseInt(currentCount) + 1;
+      console.log(newCount);
+      await setAsync('added-todos', newCount);
+    }
+  
+    res.send(todo);
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to add new todo: ', error});
+  }
 });
+
+router.get('/statistics', async (req, res) => {
+  const todoCount = await getAsync('added-todos');
+  
+  if (!todoCount) {
+    res.status(404).json('Failed to load statistics');
+  }
+
+  res.status(200).json({ 'added-todos': todoCount });
+})
 
 const singleRouter = express.Router();
 
@@ -52,7 +81,7 @@ singleRouter.get('/', async (req, res) => {
 /* PUT todo. */
 singleRouter.put('/', async (req, res) => {
   try {
-    const id = req.params;
+    const id = req.params.id;
     const updatedTodo = await Todo.findByIdAndUpdate(id, req.body, {
       new: true,
     });
