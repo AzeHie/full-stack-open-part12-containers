@@ -17,7 +17,7 @@ router.post('/', async (req, res) => {
       text: req.body.text,
       done: false,
     });
-  
+
     if (todo) {
       let currentCount = await getAsync('added-todos');
 
@@ -29,22 +29,27 @@ router.post('/', async (req, res) => {
       console.log(newCount);
       await setAsync('added-todos', newCount);
     }
-  
+
     res.send(todo);
   } catch (error) {
-    res.status(500).json({ error: 'Failed to add new todo: ', error});
+    return res.status(500).json({ error: 'Failed to add new todo: ', error });
   }
 });
 
 router.get('/statistics', async (req, res) => {
-  const todoCount = await getAsync('added-todos');
-  
-  if (!todoCount) {
-    res.status(404).json('Failed to load statistics');
-  }
+  try {
+    let todoCount = await getAsync('added-todos');
+    console.log(todoCount);
 
-  res.status(200).json({ 'added-todos': todoCount });
-})
+    if (!todoCount) {
+      todoCount = 0;
+    }
+
+    return res.status(200).json({ 'added-todos': todoCount });
+  } catch (err) {
+    return res.status(404).json('Failed to load statistics');
+  }
+});
 
 const singleRouter = express.Router();
 
@@ -59,7 +64,7 @@ const findByIdMiddleware = async (req, res, next) => {
       'Failed to find todo by specified ID, something went wrong',
       err
     );
-    res
+    return res
       .status(500)
       .json('Failed to find todo by specified ID, something went wrong');
   }
@@ -96,7 +101,7 @@ singleRouter.put('/', async (req, res) => {
     });
   } catch (err) {
     console.error('Failed to update todo: ', err);
-    res.status(500).json('Failed to update todo');
+    return res.status(500).json('Failed to update todo');
   }
 });
 
